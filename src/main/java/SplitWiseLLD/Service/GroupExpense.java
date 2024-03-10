@@ -21,12 +21,9 @@ public class GroupExpense {
 
         final Expense getBalance = getBalances(groupId,userId);
 
-        //return expenseService.getPaymentGraph(getBalance);
-
-
-
-        return null;
+        return expenseService.getPaymentGraph(getBalance);
     }
+    
     public Expense sumExpenses (List<Expense> groupExpenses){
         Map<User, Amount> resultBalances = new HashMap<>();
         for(Expense expense : groupExpenses){
